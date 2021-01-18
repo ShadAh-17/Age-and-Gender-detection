@@ -15,15 +15,12 @@ Use-case — we will be doing some face recognition, face detection stuff and fu
 <h6>Source:https://www.kiwi-digital.com/produkty/age-gender-detection</h6>
 
 
-<h3>What is Computer Vision?</h3>
-Computer Vision is the field of study that enables computers to see and identify digital images and videos as a human would. The challenges it faces largely follow from the limited understanding of biological vision. Computer Vision involves acquiring, processing, analyzing, and understanding digital images to extract high-dimensional data from the real world in order to generate symbolic or numerical information which can then be used to make decisions. The process often includes practices like object recognition, video tracking, motion estimation, and image restoration.
 
-
-<h5>Age and Gender Detection Project- Objective</h5>
+<h3>Age and Gender Detection Project- Objective</h3>
 
 To build a gender and age detector that can approximately guess the gender and age of the person (face) in a picture using Deep Learning on the Adience dataset.
 
-<h5>Gender and Age Detection – About the Project</h5>
+<h3>Gender and Age Detection – About the Project</h3>
 
 In this Python Project, we will use Deep Learning to accurately identify the gender and age of a person from a single image of a face. We will use the models trained by Tal Hassner and Gil Levi. The predicted gender may be one of ‘Male’ and ‘Female’, and the predicted age may be one of the following ranges- (0 – 2), (4 – 6), (8 – 12), (15 – 20), (25 – 32), (38 – 43), (48 – 53), (60 – 100) (8 nodes in the final softmax layer). It is very difficult to accurately guess an exact age from a single image because of factors like makeup, lighting, obstructions, and facial expressions. And so, we make this a classification problem instead of making it one of regression.
 
@@ -46,22 +43,9 @@ Put the results on the image and display it
 The Dataset
 For this python project, we’ll use the Adience dataset; the dataset is available in the public domain and you can find it here. This dataset serves as a benchmark for face photos and is inclusive of various real-world imaging conditions like noise, lighting, pose, and appearance. The images have been collected from Flickr albums and distributed under the Creative Commons (CC) license. It has a total of 26,580 photos of 2,284 subjects in eight age ranges (as mentioned above) and is about 1GB in size. The models we will use have been trained on this dataset.
 
-<h5>Requirements :</h5>
-
-1.pip install OpenCV-python</br>2.Haar cascades for Face detection</br>3.Gender Recognition with CNN</br>4.Age Recognition with CNN</br> 
-
- <h6>For Download</h6> 
- opencv link it here:https://opencv.org</br> 
-Hear cascade link it here:https://github.com/opencv/opencv/blob/master/data/haarcascades
- prtotxt and .caffemodel from this link :https://talhassner.github.io/home/publication/2015_CVPR
-
-How it works
-
-Let's have an overview how it works in general.
 
 
-<a href="https://imgflip.com/gif/3k4yh4"><img src="https://i.imgflip.com/3k4yh4.gif" title="made at imgflip.com"/></a>
-
+<h3>How it works</h3>
 
 For face detection, we have a .pb file- this is a protobuf file (protocol buffer); it holds the graph definition and the trained weights of the model. We can use this to run the trained model. And while a .pb file holds the protobuf in binary format, one with the .pbtxt extension holds it in text format. These are TensorFlow files. For age and gender, the .prototxt files describe the network configuration and the .caffemodel file defines the internal states of the parameters of the layers.
 
